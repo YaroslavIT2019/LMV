@@ -20,6 +20,7 @@ namespace HMI.Operations
         string[] af;
         void Balance()
         {
+            // отримати дані про баланс користувача
             af = File.ReadAllLines(inf.path);
             string a = "";
 
@@ -35,13 +36,14 @@ namespace HMI.Operations
         public Form_1_1_4()
         {
             InitializeComponent();
-            textBox1.MaxLength = 16;  // можна вписувати максимум 8 символів
+            textBox1.MaxLength = 16;  // можна вписувати максимум 16 символів
             textBox2.MaxLength = 6;  // можна вписувати максимум 6 символів
             Balance();
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
+            // перейти до форми з підтвердженням
             inf.MessageToFile(inf.path_conf, "Перейти до головного меню з меню переказу на іншу карту?");
 
             Form_1_1_7 conf_form = new Form_1_1_7();
@@ -80,6 +82,8 @@ namespace HMI.Operations
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // якщо запрошувана сума менша (чи дорівнює) за суму на карті, то виконати операцію
+            // якщо ні, то видати відповідне повідомлення
             decimal count = Convert.ToDecimal(textBox2.Text);
             if (count <= balance)
             {

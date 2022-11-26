@@ -13,12 +13,14 @@ namespace HMI
 
         public void ToForm(Form form, Form thisform)
         {
+            // універсальна операція переходу до іншої форми
             form.Show();
             thisform.Hide();
         }
 
         public void MessageToFile(string path_temp, string mess)
         {
+            // універсальна операція виводу повідомлення чи підтвердження
             using (FileStream file = new FileStream(path_temp, FileMode.OpenOrCreate))
             using (StreamWriter stream = new StreamWriter(file))
                 stream.WriteLine(mess);
@@ -37,6 +39,7 @@ namespace HMI
 
         public void GetStatistics()
         {
+            // отримати статистичні дані
             string[] af = File.ReadAllLines(path_statistics);
 
             for (int i = 0; i < af.Length; i++)
@@ -56,6 +59,7 @@ namespace HMI
 
         public void SetStatistics(int num, DateTime dt)
         {
+            // змінити статистичні дані, щодо операцій
             using (FileStream file = new FileStream(path_statistics, FileMode.Append))
             using (StreamWriter stream = new StreamWriter(file))
             {

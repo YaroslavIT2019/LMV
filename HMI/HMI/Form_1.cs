@@ -28,17 +28,18 @@ namespace HMI
 
         private void button1_Click(object sender, EventArgs e)
         {
-            // перейти до головного меню
             Information inf = new Information();
 
             if (textBox1.Text == "") return;
             if (Convert.ToInt32(textBox1.Text) == inf.password)
             {
+                // перейти до головного меню
                 Form_1_1 switch_form = new Form_1_1();
                 inf.ToForm(switch_form, this);
             }
             else
             {
+                // видати повідомдлення, що пін-код неправильний та повернутися в початковий стан
                 inf.MessageToFile(inf.path_mess, "Не правильний пін-код");
                
                 Form_1_1_8 form8 = new Form_1_1_8();

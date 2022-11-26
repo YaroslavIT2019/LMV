@@ -39,7 +39,7 @@ namespace HMI.System_Menu
         {
             Information inf = new Information();
 
-            // перейти до головного меню
+            // перейти до системного меню
             if (textBox1.Text == "") return;
             if (Convert.ToInt32(textBox1.Text) == inf.system_meny_password)
             {
@@ -48,6 +48,7 @@ namespace HMI.System_Menu
             }
             else
             {
+                // перейти до головного меню
                 inf.MessageToFile(inf.path_mess, "Не правильний пін-код для входу в системне меню");
 
                 Form_1_1_8 form8 = new Form_1_1_8();

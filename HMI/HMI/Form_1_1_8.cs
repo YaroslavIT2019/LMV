@@ -16,12 +16,13 @@ namespace HMI
         public Form_1_1_8()
         {
             InitializeComponent();
-            string[] af = File.ReadAllLines(inf.path_mess);
+            string[] af = File.ReadAllLines(inf.path_mess); // отримати повідомлення для виведення
             textBox1.Text = af[0];
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // виводити повідомлення щодо стану здійснення операцій
             if (textBox1.Text == "Не правильний пін-код")
             {
                 Form_1 main_form = new Form_1();

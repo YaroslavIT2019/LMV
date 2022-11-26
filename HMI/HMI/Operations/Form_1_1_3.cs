@@ -22,6 +22,7 @@ namespace HMI.Operations
         string[] af_atm;
         void Balance()
         {
+            // отримати дані про баланс користувача та кількість грошей в банкоматі
             af = File.ReadAllLines(inf.path);
             af_atm = File.ReadAllLines(inf.path_atm);
             string a = "";
@@ -51,6 +52,8 @@ namespace HMI.Operations
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // якщо запрошувана сума менша (чи дорівнює) за суму на карті та суму в банкоматі, то виконати операцію
+            // якщо ні, то видати відповідне повідомлення
             decimal count = Convert.ToDecimal(textBox1.Text);
             if (count <= balance)
             {
@@ -120,6 +123,7 @@ namespace HMI.Operations
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // перейти до форми з підтвердженням
             inf.MessageToFile(inf.path_conf, "Перейти до головного меню з меню зняття готівки?");
 
             Form_1_1_7 conf_form = new Form_1_1_7();

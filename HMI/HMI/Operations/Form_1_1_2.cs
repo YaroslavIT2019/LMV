@@ -16,6 +16,7 @@ namespace HMI.Operations
         Statistics stat = new Statistics();
         void Balance()
         {
+            // отримати дані про баланс користувача
             string[] af = File.ReadAllLines(inf.path);
             string a = "";
 
@@ -33,12 +34,13 @@ namespace HMI.Operations
         {
             InitializeComponent();
             textBox1.ReadOnly = true;
-            stat.SetStatistics(2, DateTime.Now);
+            stat.SetStatistics(2, DateTime.Now);  // записати в статистику перегляд балансу
             Balance();
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // перейти до головного меню
             Form_1_1 switch_form = new Form_1_1();
             inf.ToForm(switch_form, this);
         }

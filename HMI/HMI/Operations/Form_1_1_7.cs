@@ -16,7 +16,7 @@ namespace HMI.Operations
         public Form_1_1_7()
         {
             InitializeComponent();
-            string[] af = File.ReadAllLines(inf.path_conf);
+            string[] af = File.ReadAllLines(inf.path_conf);  // отримати повідомлення для підтвердження
             textBox1.Text = af[0];
         }
 
@@ -24,24 +24,28 @@ namespace HMI.Operations
         {
             if (textBox1.Text == "Перейти до головного меню з меню зняття готівки?")
             {
+                // повернутися в останню форму
                 File.Delete(inf.path_conf);
                 Form_1_1_3 form3 = new Form_1_1_3();
                 inf.ToForm(form3, this);
             }
             else if (textBox1.Text == "Перейти до головного меню з меню переказу на іншу карту?")
             {
+                // повернутися в останню форму
                 File.Delete(inf.path_conf);
                 Form_1_1_4 form4 = new Form_1_1_4();
                 inf.ToForm(form4, this);
             }
             else if (textBox1.Text == "Перейти до головного меню з меню переказу на номер телефону?")
             {
+                // повернутися в останню форму
                 File.Delete(inf.path_conf);
                 Form_1_1_5 form5 = new Form_1_1_5();
                 inf.ToForm(form5, this);
             }
             else if (textBox1.Text == "Чи дійсно ви хочете завершити роботу?")
             {
+                // повернутися в останню форму
                 File.Delete(inf.path_conf);
                 Form_1_1 switch_form = new Form_1_1();
                 inf.ToForm(switch_form, this);
@@ -54,12 +58,14 @@ namespace HMI.Operations
             textBox1.Text == "Перейти до головного меню з меню переказу на іншу карту?" ||
             textBox1.Text == "Перейти до головного меню з меню переказу на номер телефону?")
             {
+                // перейти до головного меню
                 File.Delete(inf.path_conf);
                 Form_1_1 switch_form = new Form_1_1();
                 inf.ToForm(switch_form, this);
             }
             else if (textBox1.Text == "Чи дійсно ви хочете завершити роботу?")
             {
+                // закрити програму
                 File.Delete(inf.path_conf);
                 File.Delete(inf.path_mess);
                 Application.Exit();

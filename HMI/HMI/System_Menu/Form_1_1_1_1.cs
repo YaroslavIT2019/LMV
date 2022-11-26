@@ -28,6 +28,7 @@ namespace HMI.System_Menu
 
         void Add_One()
         {
+            // виведення статистики операцій по типам
             Add_Row1("Перегляд балансу", stat.operation_112);
             Add_Row1("Зняття готівки", stat.operation_113);
             Add_Row1("Переказ на іншу карту", stat.operation_114);
@@ -36,6 +37,7 @@ namespace HMI.System_Menu
         }
         void Add_Two()
         {
+            // виведення статистики операцій по датам
             string[] af = File.ReadAllLines(stat.path_statistics);
 
             for (int i = 0; i < af.Length; i++)
@@ -54,6 +56,7 @@ namespace HMI.System_Menu
         }
         void Add_Three()
         {
+            // виведення інформації щодо заповненості банкомату
             decimal balance_in_atm = 0;
 
             string[] af = File.ReadAllLines(inf.path_atm);
@@ -77,24 +80,28 @@ namespace HMI.System_Menu
         }
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
+            // перевірка обирання саме цієї інформації для виводу
             if (radioButton1.Checked == true)   panel2.Visible = true;
             if (radioButton1.Checked == false)  panel2.Visible = false;
         }
 
         private void radioButton2_CheckedChanged(object sender, EventArgs e)
         {
+            // перевірка обирання саме цієї інформації для виводу
             if (radioButton2.Checked == true) panel3.Visible = true;
             if (radioButton2.Checked == false) panel3.Visible = false;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
+            // перевірка обирання саме цієї інформації для виводу
             if (radioButton3.Checked == true) panel4.Visible = true;
             if (radioButton3.Checked == false) panel4.Visible = false;
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
+            // зміна загального балансу банкомату
             decimal res = inf.max_in_atm / 100 * 75;
             using (FileStream file = new FileStream(inf.path_atm, FileMode.OpenOrCreate))
             using (StreamWriter stream = new StreamWriter(file))
@@ -105,6 +112,7 @@ namespace HMI.System_Menu
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // перехід у головне меню
             Form_1_1 switch_form = new Form_1_1();
             inf.ToForm(switch_form, this);
         }

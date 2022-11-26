@@ -22,6 +22,7 @@ namespace HMI.Operations
         string[] af_atm;
         void Balance()
         {
+            // отримати дані про баланс користувача та загальну суму грошей в банеоматі
             af = File.ReadAllLines(inf.path);
             af_atm = File.ReadAllLines(inf.path_atm);
             string a = "";
@@ -47,13 +48,16 @@ namespace HMI.Operations
             InitializeComponent();
             textBox1.ReadOnly = true;
             Random rnd = new Random();
-            decimal value = rnd.Next(500, 10001);
+            decimal value = rnd.Next(500, 10001);  // випадкова сума для "поповнення"
             textBox1.Text = value.ToString();
             Balance();
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
+            // якщо сума поповнення та сума грошей в банкоматі разом більші за максимальну
+            // місткість банкомату, то видати відповідне повідомлення
+            // якщо ні, то виконати операцію
             Information inf = new Information();
 
             if (Convert.ToDecimal(textBox1.Text) + balance_in_atm > inf.max_in_atm)
