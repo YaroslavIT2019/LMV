@@ -81,33 +81,15 @@ namespace HMI.System_Menu
         private void radioButton1_CheckedChanged(object sender, EventArgs e)
         {
             // перевірка обирання саме цієї інформації для виводу
-            if (radioButton1.Checked == true)   panel2.Visible = true;
-            if (radioButton1.Checked == false)  panel2.Visible = false;
-        }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-            // перевірка обирання саме цієї інформації для виводу
-            if (radioButton2.Checked == true) panel3.Visible = true;
-            if (radioButton2.Checked == false) panel3.Visible = false;
+            if (radioButton1.Checked == true)           panel2.Visible = true;
+            else if (radioButton1.Checked == false)     panel2.Visible = false;
         }
 
         private void radioButton3_CheckedChanged(object sender, EventArgs e)
         {
             // перевірка обирання саме цієї інформації для виводу
-            if (radioButton3.Checked == true) panel4.Visible = true;
-            if (radioButton3.Checked == false) panel4.Visible = false;
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            // зміна загального балансу банкомату
-            decimal res = inf.max_in_atm / 100 * 75;
-            using (FileStream file = new FileStream(inf.path_atm, FileMode.OpenOrCreate))
-            using (StreamWriter stream = new StreamWriter(file))
-                stream.WriteLine("b) " + res);
-
-            Add_Three();
+            if (radioButton3.Checked == true)           panel4.Visible = true;
+            else if (radioButton3.Checked == false)     panel4.Visible = false;
         }
 
         private void button2_Click(object sender, EventArgs e)

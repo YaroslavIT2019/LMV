@@ -13,11 +13,34 @@ namespace HMI
     public partial class Form_1_1_8 : Form
     {
         Information inf = new Information();
+
+        void Title()
+        {
+            if (textBox1.Text == "Не правильний пін-код" || textBox1.Text == "У банкоматі недостатньо грошей" ||
+                textBox1.Text == "Не правильний пін-код для входу в системне меню" ||
+                textBox1.Text == "На карті недостатньо грошей для здійснення операції зняття готівки" ||
+                textBox1.Text == "На карті недостатньо грошей для здійснення операції переведення грошей на іншу картку" ||
+                textBox1.Text == "На карті недостатньо грошей для здійснення операції переведення грошей на номер телефону" ||
+                textBox1.Text == "Банкомат переповнено. Не забудьте забрати гроші!")
+            {
+                label1.Text = "Помилка!";
+            }
+            else if (textBox1.Text == "Отримайте гроші" || textBox1.Text == "Переказ грошей успішно здійснено" ||
+                textBox1.Text == "Баланс карти успішно поповнено")
+            {
+                label1.Text = "Успіх!";
+            }
+            else if (textBox1.Text == "Вкладіть до банкомату необхідну кількість грошей у гривнях")
+            {
+                label1.Text = "Попередження!";
+            }
+        }
         public Form_1_1_8()
         {
             InitializeComponent();
             string[] af = File.ReadAllLines(inf.path_mess); // отримати повідомлення для виведення
             textBox1.Text = af[0];
+            Title();
         }
 
         private void button1_Click(object sender, EventArgs e)
