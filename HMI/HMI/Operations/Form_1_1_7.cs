@@ -13,10 +13,12 @@ namespace HMI.Operations
     public partial class Form_1_1_7 : Form
     {
         Information inf = new Information();
+        string[] af1;
         public Form_1_1_7()
         {
             InitializeComponent();
             string[] af = File.ReadAllLines(inf.path_conf);  // отримати повідомлення для підтвердження
+            af1 = File.ReadAllLines(inf.path_atm);
             textBox1.Text = af[0];
         }
 
@@ -66,6 +68,11 @@ namespace HMI.Operations
             else if (textBox1.Text == "Чи дійсно ви хочете завершити роботу?")
             {
                 // закрити програму
+                using (FileStream file = new FileStream(inf.path_debug, FileMode.OpenOrCreate))
+                using (StreamWriter stream = new StreamWriter(file))
+                {
+                    stream.WriteLine("i) 0");
+                }
                 File.Delete(inf.path_conf);
                 File.Delete(inf.path_mess);
                 Application.Exit();

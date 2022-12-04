@@ -52,3 +52,4 @@ C:\Users\Samsung\Desktop\LMV\HMI\HMI\obj\Debug\net6.0-windows\refint\HMI.dll
 C:\Users\Samsung\Desktop\LMV\HMI\HMI\obj\Debug\net6.0-windows\HMI.pdb
 C:\Users\Samsung\Desktop\LMV\HMI\HMI\obj\Debug\net6.0-windows\HMI.genruntimeconfig.cache
 C:\Users\Samsung\Desktop\LMV\HMI\HMI\obj\Debug\net6.0-windows\ref\HMI.dll
+C:\Users\Samsung\Desktop\LMV\HMI\HMI\obj\Debug\net6.0-windows\HMI.Properties.Resources.resources

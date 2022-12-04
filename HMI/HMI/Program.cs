@@ -1,5 +1,6 @@
 namespace HMI
 {
+    
     class Information
     {
         public int password = 1111;
@@ -10,6 +11,7 @@ namespace HMI
         public string path_mess = @"C:\ATM\Message.txt";
         public string path_conf = @"C:\ATM\Confirmation.txt";
         public string path_atm = @"C:\ATM\ATM.txt";
+        public string path_debug = @"C:\ATM\Debug.txt";
 
         public void ToForm(Form form, Form thisform)
         {

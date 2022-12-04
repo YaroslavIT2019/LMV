@@ -13,7 +13,7 @@ namespace HMI
     public partial class Form_1_1_8 : Form
     {
         Information inf = new Information();
-
+        string[] af1;
         void Title()
         {
             if (textBox1.Text == "Не правильний пін-код" || textBox1.Text == "У банкоматі недостатньо грошей" ||
@@ -39,6 +39,7 @@ namespace HMI
         {
             InitializeComponent();
             string[] af = File.ReadAllLines(inf.path_mess); // отримати повідомлення для виведення
+            af1 = File.ReadAllLines(inf.path_atm); 
             textBox1.Text = af[0];
             Title();
         }
@@ -48,6 +49,11 @@ namespace HMI
             // виводити повідомлення щодо стану здійснення операцій
             if (textBox1.Text == "Не правильний пін-код")
             {
+                using (FileStream file = new FileStream(inf.path_debug, FileMode.OpenOrCreate))
+                using (StreamWriter stream = new StreamWriter(file))
+                {
+                    stream.WriteLine("i) 1");
+                }
                 Form_1 main_form = new Form_1();
                 File.Delete(inf.path_mess);
                 inf.ToForm(main_form, this);
