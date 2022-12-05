@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form_1_1_1_1));
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.radioButton3 = new System.Windows.Forms.RadioButton();
@@ -51,10 +52,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label1.Location = new System.Drawing.Point(12, 9);
+            this.label1.Font = new System.Drawing.Font("Segoe UI", 25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label1.Location = new System.Drawing.Point(30, 29);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(236, 41);
+            this.label1.Size = new System.Drawing.Size(329, 57);
             this.label1.TabIndex = 0;
             this.label1.Text = "Системне меню";
             // 
@@ -62,18 +63,18 @@
             // 
             this.panel1.Controls.Add(this.radioButton3);
             this.panel1.Controls.Add(this.radioButton1);
-            this.panel1.Location = new System.Drawing.Point(12, 93);
+            this.panel1.Location = new System.Drawing.Point(30, 133);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(397, 122);
+            this.panel1.Size = new System.Drawing.Size(450, 122);
             this.panel1.TabIndex = 1;
             // 
             // radioButton3
             // 
             this.radioButton3.AutoSize = true;
-            this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton3.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButton3.Location = new System.Drawing.Point(3, 67);
             this.radioButton3.Name = "radioButton3";
-            this.radioButton3.Size = new System.Drawing.Size(327, 39);
+            this.radioButton3.Size = new System.Drawing.Size(438, 50);
             this.radioButton3.TabIndex = 2;
             this.radioButton3.TabStop = true;
             this.radioButton3.Text = "Ремонтування банкомату";
@@ -83,10 +84,10 @@
             // radioButton1
             // 
             this.radioButton1.AutoSize = true;
-            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.radioButton1.Font = new System.Drawing.Font("Segoe UI", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.radioButton1.Location = new System.Drawing.Point(3, 3);
             this.radioButton1.Name = "radioButton1";
-            this.radioButton1.Size = new System.Drawing.Size(274, 39);
+            this.radioButton1.Size = new System.Drawing.Size(363, 50);
             this.radioButton1.TabIndex = 0;
             this.radioButton1.TabStop = true;
             this.radioButton1.Text = "Статистика операцій";
@@ -97,9 +98,9 @@
             // 
             this.panel2.Controls.Add(this.listView2);
             this.panel2.Controls.Add(this.listView1);
-            this.panel2.Location = new System.Drawing.Point(454, 93);
+            this.panel2.Location = new System.Drawing.Point(543, 29);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(582, 905);
+            this.panel2.Size = new System.Drawing.Size(735, 1009);
             this.panel2.TabIndex = 2;
             this.panel2.Visible = false;
             // 
@@ -108,12 +109,12 @@
             this.listView2.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader3,
             this.columnHeader4});
-            this.listView2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listView2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView2.FullRowSelect = true;
             this.listView2.GridLines = true;
-            this.listView2.Location = new System.Drawing.Point(3, 253);
+            this.listView2.Location = new System.Drawing.Point(3, 321);
             this.listView2.Name = "listView2";
-            this.listView2.Size = new System.Drawing.Size(575, 649);
+            this.listView2.Size = new System.Drawing.Size(706, 685);
             this.listView2.TabIndex = 1;
             this.listView2.UseCompatibleStateImageBehavior = false;
             this.listView2.View = System.Windows.Forms.View.Details;
@@ -121,24 +122,24 @@
             // columnHeader3
             // 
             this.columnHeader3.Text = "Назва операції";
-            this.columnHeader3.Width = 350;
+            this.columnHeader3.Width = 430;
             // 
             // columnHeader4
             // 
             this.columnHeader4.Text = "Дата";
-            this.columnHeader4.Width = 200;
+            this.columnHeader4.Width = 250;
             // 
             // listView1
             // 
             this.listView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
             this.columnHeader1,
             this.columnHeader2});
-            this.listView1.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.listView1.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
             this.listView1.FullRowSelect = true;
             this.listView1.GridLines = true;
             this.listView1.Location = new System.Drawing.Point(3, 3);
             this.listView1.Name = "listView1";
-            this.listView1.Size = new System.Drawing.Size(474, 198);
+            this.listView1.Size = new System.Drawing.Size(585, 247);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.View = System.Windows.Forms.View.Details;
@@ -146,49 +147,49 @@
             // columnHeader1
             // 
             this.columnHeader1.Text = "Назва операції";
-            this.columnHeader1.Width = 350;
+            this.columnHeader1.Width = 430;
             // 
             // columnHeader2
             // 
             this.columnHeader2.Text = "Кількість";
             this.columnHeader2.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.columnHeader2.Width = 120;
+            this.columnHeader2.Width = 150;
             // 
             // panel4
             // 
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label2);
-            this.panel4.Location = new System.Drawing.Point(454, 93);
+            this.panel4.Location = new System.Drawing.Point(543, 28);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(461, 58);
+            this.panel4.Size = new System.Drawing.Size(735, 58);
             this.panel4.TabIndex = 3;
             this.panel4.Visible = false;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label3.Location = new System.Drawing.Point(330, 3);
+            this.label3.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label3.Location = new System.Drawing.Point(386, 9);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(0, 28);
+            this.label3.Size = new System.Drawing.Size(0, 35);
             this.label3.TabIndex = 1;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.label2.Location = new System.Drawing.Point(3, 3);
+            this.label2.Font = new System.Drawing.Font("Segoe UI", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.label2.Location = new System.Drawing.Point(7, 9);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(303, 28);
+            this.label2.Size = new System.Drawing.Size(373, 35);
             this.label2.TabIndex = 0;
             this.label2.Text = "Ступінь заповнення банкомату:";
             // 
             // button2
             // 
-            this.button2.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            this.button2.Location = new System.Drawing.Point(12, 916);
+            this.button2.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            this.button2.Location = new System.Drawing.Point(1696, 906);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(427, 86);
+            this.button2.Size = new System.Drawing.Size(212, 162);
             this.button2.TabIndex = 4;
             this.button2.Text = "У головне меню";
             this.button2.UseVisualStyleBackColor = true;
@@ -198,7 +199,8 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1051, 1010);
+            this.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("$this.BackgroundImage")));
+            this.ClientSize = new System.Drawing.Size(1920, 1080);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
@@ -208,6 +210,7 @@
             this.Name = "Form_1_1_1_1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.Manual;
             this.Text = "Form_1_1_1_1";
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
