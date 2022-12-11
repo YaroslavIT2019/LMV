@@ -21,7 +21,8 @@ namespace HMI
                 textBox1.Text == "На карті недостатньо грошей для здійснення операції зняття готівки" ||
                 textBox1.Text == "На карті недостатньо грошей для здійснення операції переведення грошей на іншу картку" ||
                 textBox1.Text == "На карті недостатньо грошей для здійснення операції переведення грошей на номер телефону" ||
-                textBox1.Text == "Банкомат переповнено. Не забудьте забрати гроші!")
+                textBox1.Text == "Банкомат переповнено. Не забудьте забрати гроші!" ||
+                textBox1.Text == "Неможливо зняти нуль гривень!")
             {
                 label1.Text = "Помилка!";
             }
@@ -30,7 +31,8 @@ namespace HMI
             {
                 label1.Text = "Успіх!";
             }
-            else if (textBox1.Text == "Вкладіть до банкомату необхідну кількість грошей у гривнях")
+            else if (textBox1.Text == "Вкладіть до банкомату необхідну кількість грошей у гривнях" ||
+                textBox1.Text == "Не забудьте забрати гроші!")
             {
                 label1.Text = "Попередження!";
             }
@@ -58,14 +60,15 @@ namespace HMI
                 File.Delete(inf.path_mess);
                 inf.ToForm(main_form, this);
             }            
-            else if (textBox1.Text == "Не правильний пін-код для входу в системне меню")
+            else if (textBox1.Text == "Не правильний пін-код для входу в системне меню" ||
+                textBox1.Text == "Не забудьте забрати гроші!")
             {
                 Form_1_1 switch_form = new Form_1_1();
                 File.Delete(inf.path_mess);
                 inf.ToForm(switch_form, this); 
             }
             else if (textBox1.Text == "На карті недостатньо грошей для здійснення операції зняття готівки" ||
-                textBox1.Text == "У банкоматі недостатньо грошей")
+                textBox1.Text == "У банкоматі недостатньо грошей" || textBox1.Text == "Неможливо зняти нуль гривень!")
             {
                 Operations.Form_1_1_3 form3 = new Operations.Form_1_1_3();
                 File.Delete(inf.path_mess);

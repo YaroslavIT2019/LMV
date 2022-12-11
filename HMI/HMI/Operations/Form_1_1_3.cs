@@ -55,6 +55,15 @@ namespace HMI.Operations
             // якщо запрошувана сума менша (чи дорівнює) за суму на карті та суму в банкоматі, то виконати операцію
             // якщо ні, то видати відповідне повідомлення
             decimal count = Convert.ToDecimal(textBox1.Text);
+            if (count == 0) 
+            {
+                inf.MessageToFile(inf.path_mess, "Неможливо зняти нуль гривень!");
+
+                Form_1_1_8 form8 = new Form_1_1_8();
+                inf.ToForm(form8, this);
+                return;
+            }
+            
             if (count <= balance)
             {
                 if (count <= balance_in_atm)

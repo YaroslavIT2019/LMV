@@ -98,5 +98,14 @@ namespace HMI.Operations
                 inf.ToForm(form8, this);
             }
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            // перейти до форми з підтвердженням
+            inf.MessageToFile(inf.path_conf, "Перейти до головного меню з меню поповнення балансу карти?");
+
+            Form_1_1_7 conf_form = new Form_1_1_7();
+            inf.ToForm(conf_form, this);
+        }
     }
 }

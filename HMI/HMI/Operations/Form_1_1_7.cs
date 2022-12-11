@@ -52,6 +52,13 @@ namespace HMI.Operations
                 Form_1_1 switch_form = new Form_1_1();
                 inf.ToForm(switch_form, this);
             }
+            else if (textBox1.Text == "Перейти до головного меню з меню поповнення балансу карти?")
+            {
+                // повернутися в останню форму
+                File.Delete(inf.path_conf);
+                Form_1_1_6 form6 = new Form_1_1_6();
+                inf.ToForm(form6, this);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -76,6 +83,14 @@ namespace HMI.Operations
                 File.Delete(inf.path_conf);
                 File.Delete(inf.path_mess);
                 Application.Exit();
+            }
+            else if (textBox1.Text == "Перейти до головного меню з меню поповнення балансу карти?")
+            {
+                File.Delete(inf.path_conf);
+                inf.MessageToFile(inf.path_mess, "Не забудьте забрати гроші!");
+
+                Form_1_1_8 mes_form = new Form_1_1_8();
+                inf.ToForm(mes_form, this);
             }
         }
     }

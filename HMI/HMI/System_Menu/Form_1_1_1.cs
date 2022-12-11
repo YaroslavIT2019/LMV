@@ -55,5 +55,10 @@ namespace HMI.System_Menu
                 inf.ToForm(form8, this);
             }
         }
+
+        private void Form_1_1_1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
